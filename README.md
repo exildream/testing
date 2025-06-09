@@ -1,16 +1,28 @@
-# QHERO Telegram Bot
+# QHERO Platform
 
-Пример прототипа системы для любителей квестов. Используется Python 3 и библиотека `aiogram` 3.
+Пример минимальной реализации Telegram Mini App для системы QHERO.
+Состоит из бэкенда на FastAPI, Telegram‑бота и WebApp на чистом JS.
 
-## Запуск
-1. Создайте виртуальное окружение и установите зависимости:
+## Структура
+```
+backend/   # FastAPI приложение и модели
+bot/       # Telegram бот на aiogram
+frontend/  # клиентская часть WebApp
+```
+
+## Быстрый старт
+1. Установите зависимости
    ```bash
-   pip install aiogram pydantic sqlalchemy asyncpg
+   pip install -r requirements.txt
    ```
-2. Создайте файл `.env` или переменные окружения `BOT_TOKEN` и `DB_DSN` для указания токена бота и строки подключения к PostgreSQL.
+2. Скопируйте `.env.example` в `.env` и укажите токен бота и DSN базы.
 3. Запустите бота:
    ```bash
-   python -m qhero_bot.bot
+   python -m bot.bot
+   ```
+4. Запустите бэкенд:
+   ```bash
+   uvicorn backend.main:app
    ```
 
-Минимальный webapp находится в каталоге `webapp/`. Это простая HTML‑заглушка.
+Фронтенд располагается в каталоге `frontend/` и может быть раздаваем любым веб‑сервером.

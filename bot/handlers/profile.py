@@ -1,7 +1,7 @@
 from aiogram import Router, types
 
-from ..db import get_session
-from ..models import User
+from backend.db import get_session
+from backend.models import User
 
 router = Router()
 
