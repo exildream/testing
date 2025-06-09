@@ -1,8 +1,8 @@
 from aiogram import Router, types
 from sqlalchemy import select
 
-from ..db import get_session
-from ..models import Quest
+from backend.db import get_session
+from backend.models import Quest
 
 router = Router()
 

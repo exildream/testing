@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+    background: var(--tg-theme-bg-color, #121212);
+    color: var(--tg-theme-text-color, #fff);
+    margin: 0;
+    padding: 2rem;
+}
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+}
