@@ -1,16 +1,20 @@
 # QHERO Telegram Bot
 
-Пример прототипа системы для любителей квестов. Используется Python 3 и библиотека `aiogram` 3.
+Прототип Telegram-приложения для игроков в квесты. Используется `aiogram` 3, `pydantic-settings`, `SQLAlchemy` и `asyncpg`.
 
 ## Запуск
-1. Создайте виртуальное окружение и установите зависимости:
+1. Установите зависимости:
    ```bash
-   pip install aiogram pydantic sqlalchemy asyncpg
+   pip install -r requirements.txt
    ```
-2. Создайте файл `.env` или переменные окружения `BOT_TOKEN` и `DB_DSN` для указания токена бота и строки подключения к PostgreSQL.
+2. Создайте файл `.env` со значениями `BOT_TOKEN` и `DB_DSN`:
+   ```bash
+   BOT_TOKEN=your_telegram_token
+   DB_DSN=postgresql+asyncpg://user:pass@localhost/qhero
+   ```
 3. Запустите бота:
    ```bash
    python -m qhero_bot.bot
    ```
 
-Минимальный webapp находится в каталоге `webapp/`. Это простая HTML‑заглушка.
+Минимальный WebApp-заглушка лежит в каталоге `webapp/`.
