@@ -3,8 +3,10 @@ from aiogram import Bot, Dispatcher
 
 from .config import settings
 from .handlers import all_handlers
+from .db import init_db
 
 async def main():
+    await init_db()
     bot = Bot(token=settings.bot_token)
     dp = Dispatcher()
     for router in all_handlers:
